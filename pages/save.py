@@ -95,7 +95,7 @@ def draw_cube(fit_len, fit_wid, fit_hei):
 
 
     # Light green color (#90EE90)
-    ax.voxels(voxels, facecolors="#90EE90", edgecolor="b")
+    ax.voxels(voxels, facecolors="#90EE90", edgecolor="k")
 
     ax.set_xlabel(f"Length → ({fit_len} boxes)")
     ax.set_ylabel(f"Width → ({fit_wid} boxes)")
@@ -126,6 +126,7 @@ def main():
                 st.info(
                     f"**Truck Dimensions:** {truck_len} × {truck_wid} × {truck_hei} mm\n"
                     f"**Truck Volume:** {truck_volume:.2f} m³\n"
+                    f"**Box Dimensions:** {box_len} × {box_wid} × {box_hei} mm\n"
                     f"**Box Volume:** {box_volume:.3f} m³\n"
                     f"**Utilisation:** {utilisation_percent:.1f}%\n"
                     f"👉 **Length-wise:** {fit_len} boxes\n"
@@ -135,7 +136,7 @@ def main():
                     
                 )
 
-                st.subheader(f"📊 Arrangement in {truck['name']} (Rubik’s Cube Style)")
+                st.subheader(f"📊 Arrangement in {truck['name']} ")
                 draw_cube(fit_len, fit_wid, fit_hei)
             else:
                 st.error(f"❌ No boxes can fit in {truck['name']}.")
