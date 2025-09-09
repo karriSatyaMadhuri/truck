@@ -54,6 +54,7 @@ if st.button("Save", key="save_btn"):
 
         # ✅ Mark navigation flag
         st.session_state["go_save"] = True
-        st.switch_page("pages\save.py")  # requires streamlit >= 1.32
+        st.switch_page("pages/save.py")  # requires streamlit >= 1.32
     else:
         st.error("❌ Please adjust percentages to total 100%.")
+
